@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="formSubmit()">
+
+            <input type="text" id="fname" name="name" >
+            <input type="text" id="lname" name="name" >
+            <input type="email" id="email" name="name" >
+            <input type="text" id="password" name="name" >
+            <input type="text" id="rePassword" name="name" >
+            <input type="submit" value="Send Request" />
+        </form>
+    </div>
+  
+    <script>
+        
+        function formSubmit(){
+            const fname=document.getElementById("fname").value;
+            const lname=document.getElementById("lname").value
+            const email=document.getElementById("email").value
+            const password=document.getElementById("password").value
+            const rePassword=document.getElementById("rePassword").value
+            if(
+                (fname===null || fname ==="")||
+                (lname===null || lname ==="")||
+                (email===null || email ==="")||
+                (password===null || password ==="")||
+                (rePassword===null || rePassword ==="")
+            )
+            {
+                alert("please fill all the details")
+                console.log(fname)
+            }
+            else{
+                if(password!== rePassword)
+                {
+                    alert("Please ensure both passwords match")
+                }
+                else{
+                    alert("form submitted")
+                }
+            }
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
